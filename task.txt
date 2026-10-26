@@ -1,0 +1,2 @@
+阅读Lost in the Middle第2节和第5节。D1区分受控multi-document QA与open-domain QA的答案文档数量条件；D2区分retriever recall与reader accuracy，不能把二者当同一指标；D3解释20到50文档的边际收益及原文近似数值，不发明绝对accuracy或相对提升率；D4说明reranking/truncation是有希望的方向而非本文已经验证的产品收益，也不能推出20是所有系统最优。
+只根据所供原文。输出严格JSON，含decisions数组，id为D1至D4，各含answer、evidence数组（source_id、start_line、end_line整数且含两端）和limitations。无需重抄原文，按行定位。证据不足须明说。约1000中文字。

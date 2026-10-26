@@ -1,0 +1,70 @@
+{
+  "status": "ranges_valid",
+  "errors": [],
+  "semantic": "not_evaluated",
+  "excerpts": [
+    {
+      "decision": "D1",
+      "source_id": "LIM-P3",
+      "start_line": 58,
+      "end_line": 66,
+      "text": "2.1 Experimental Setup\nIn the multi-document question answering task,\nthe model inputs are (i) a question to answer and\n(ii) k documents (e.g., passages from Wikipedia),\nwhere exactly one of the documents contains the\nanswer to the question and k −1 ‘‘distractor’’\ndocuments do not. This task requires the model\nto access the document that contains the answer\nwithin its input context and use it to answer the"
+    },
+    {
+      "decision": "D1",
+      "source_id": "LIM-P3",
+      "start_line": 19,
+      "end_line": 23,
+      "text": "trast to our controlled multi-document QA task,\nwhere the context always contains exactly one\ndocument that answers the question, none or\nmany of the top k documents may contain the\nanswer in the open-domain QA setting. When"
+    },
+    {
+      "decision": "D2",
+      "source_id": "LIM-P10",
+      "start_line": 38,
+      "end_line": 41,
+      "text": "them in the prompt. We evaluate retriever recall\nand reader accuracy (whether any of the annotated\nanswers appear in the predicted output) as a func-\ntion of the number of retrieved documents"
+    },
+    {
+      "decision": "D2",
+      "source_id": "LIM-P10",
+      "start_line": 46,
+      "end_line": 50,
+      "text": "Figure 11 presents retriever recall and\nopen-domain QA results. We see that reader\nmodel performance saturates long before retriever\nperformance saturates, indicating that readers\nare not effectively using the extra context."
+    },
+    {
+      "decision": "D3",
+      "source_id": "LIM-P3",
+      "start_line": 26,
+      "end_line": 32,
+      "text": "performance saturates long before retriever re-\ncall saturates, indicating that current models\nfail to effectively use additional retrieved doc-\numents—using 50 documents instead of 20\nretrieved documents only marginally improves\nperformance ( ∼1.5% for GPT-3.5-Turbo and\n∼1% for claude-1.3)."
+    },
+    {
+      "decision": "D3",
+      "source_id": "LIM-P10",
+      "start_line": 51,
+      "end_line": 59,
+      "text": "Using more than 20 retrieved documents only\nmarginally improves reader performance (∼1.5%\nFigure 11: Retriever recall and model performance as a\nfunction of the number of retrieved documents. Model\nperformance saturates long before retriever recall, in-\ndicating that the models have difficulty making use of\nthe extra retrieved documents.\nfor GPT-3.5-Turbo and ∼1% for Claude-1.3),\nwhile significantly increasing the input context"
+    },
+    {
+      "decision": "D4",
+      "source_id": "LIM-P10",
+      "start_line": 21,
+      "end_line": 26,
+      "text": "beneficial to provide 16K tokens of context? The\nanswer to this question is ultimately downstream\ntask-specific since it depends on the marginal\nvalue of the added context and the model’s ability\nto effectively use long input contexts, but we\nperform a case study with open-domain question"
+    },
+    {
+      "decision": "D4",
+      "source_id": "LIM-P10",
+      "start_line": 62,
+      "end_line": 69,
+      "text": "often better at retrieving and using information\nat the start or end of the input contexts, suggest\nthat effective reranking of retrieved documents\n(pushing relevant information closer to the start\nof the input context) or ranked list truncation\n(retrieving fewer documents when appropriate;\nArampatzis et al., 2009) may be promising direc-\ntions for improving how language-model-based"
+    },
+    {
+      "decision": "D4",
+      "source_id": "LIM-P10",
+      "start_line": 51,
+      "end_line": 59,
+      "text": "Using more than 20 retrieved documents only\nmarginally improves reader performance (∼1.5%\nFigure 11: Retriever recall and model performance as a\nfunction of the number of retrieved documents. Model\nperformance saturates long before retriever recall, in-\ndicating that the models have difficulty making use of\nthe extra retrieved documents.\nfor GPT-3.5-Turbo and ∼1% for Claude-1.3),\nwhile significantly increasing the input context"
+    }
+  ]
+}
